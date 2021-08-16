@@ -1,0 +1,48 @@
+services:
+  webrcon:
+    container_name: Rcon
+    image: itzg/rcon
+    environment:
+      #Feel free to override the entire variables if you know what you're doing.
+      RWA_USERNAME: ${WEBRCON_USER}
+      RWA_PASSWORD: ${WEBRCON_PASS}
+      RWA_RCON_PASSWORD: ${MC_RCON_PASS}
+      RWA_ADMIN: "TRUE"
+      RWA_RCON_HOST: magma
+    ports:
+      - 4326:4326
+      - 4327:4327  
+
+
+  magma:
+    container_name: MagmaServer
+    build: /Magma_Server/.
+    ports:
+      - 25565:25565
+    expose:
+      - "25575"
+    volumes:
+      - "./Magma_Server/:/magma/"
+        
+# I'm just gonna leave this here, if you want to enable MySQL/PhpMyAdmin just un-comment (remove the "#'s").
+# It's pretty useful if you're pretending on deploying a multi-server stack.
+
+#  mysql:
+#    container_name: mysql
+#    image: mysql
+#    expose:
+#      - 3306
+#    environment:
+#      - MYSQL_ROOT_PASSWORD: '${MYSQL_ROOTPASS}'
+#      - MYSQL_USER: '${MYSQL_USER}'
+#      - MYSQL_PASS: '${MYSQL_PASS}'
+#    volume:
+#      - "./MySQL:/mysql"
+#  
+#  phpmyadmin:
+#    container_name: PHPMyAdmin
+#    image: phpmyadmin
+#    ports:
+#         #This is the webUI for MySQL, change "change_this" to the port you want it to run at
+#      - change_this:80
+    
