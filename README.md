@@ -1,5 +1,5 @@
 # Magma Docker
-This project allows quick deployment of a Minecraft Server distro named Magma on D
+This project allows quick deployment of a Minecraft Server(version 1.12.2) distro named Magma on Docker
 
 -	Docker allows for a faster and easier deployment of the server, allowing it to be cross-platform compatible
 -	Magma allows for more flexibility due to it's capability to bridge Spigot(paper in this case) and Forge, granting us the ability to install ForgeMods and/or Bukkit/Spigot Plugins.
