@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk8:alpine-jre
+FROM adoptopenjdk:8-jre
 RUN mkdir /magma
 WORKDIR /magma/
 COPY ./mods/ ./mods/
@@ -13,4 +13,4 @@ COPY ./magma.yml .
 
 
 
-CMD Java -jar magma-1.12.2-server.jar
+CMD java -jar magma-1.12.2-server.jar
