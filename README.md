@@ -27,6 +27,6 @@ This project allows quick deployment of a Minecraft Server(version 1.12.2) distr
 	-	The your Minecraft Server files should be in the `/MagmaDocker/Magma_Server/` folder, in order to apply any file changes to your server [restart the container through docker](https://docs.docker.com/engine/reference/commandline/restart/).
 
 7. Server interfacing
-	- This stack uses the amazing [ITZG Rcon Web Admin panel](https://github.com/itzg/docker-rcon-web-admin) to give you direct access to your server's console without headaches, by default, the stack should host this on [localhost:4326](http://localhost:4326) (If you're not hositng the stack on your local machine, use ``http://"TargetIP/DNS":4326)`` (be sure firewall rules are allowing access to the ports).
+	- This stack uses the amazing [ITZG Rcon Web Admin panel](https://github.com/itzg/docker-rcon-web-admin) to give you direct access to your server's console without headaches, by default, the stack should host this on [localhost:4326](http://localhost:4326) (If you're not hositng the stack on your local machine, use ``http://"TargetIP/DNS":4326`` (be sure firewall rules are allowing access to the ports).
 	- Log in with the credentials you've set up on step 3.
 
